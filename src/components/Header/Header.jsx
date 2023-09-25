@@ -33,7 +33,7 @@ const Header = () => {
   );
   return (
     <div className="max-w-7xl mx-auto">
-      <div className="navbar bg-transparent">
+      <div className="navbar bg-transparent ">
         <div className="md:navbar-start navbar-center">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
