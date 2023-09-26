@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Card = ({item}) => {
-    const {id, picture , title, category, category_bg, card_bg, text_button_bg, description, price} = item;
+    const {id, picture , title, category, category_bg, card_bg, text_button_bg} = item;
 
   return (
     <div>
