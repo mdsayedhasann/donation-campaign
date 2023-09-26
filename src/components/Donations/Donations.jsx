@@ -6,6 +6,7 @@ import DonatedCard from "../DonatedCard/DonatedCard";
 const Donations = () => {
   const getAllData = useLoaderData();
   const [donated, setDonated] = useState([]);
+  const [total, setTotal] = useState(4)
 
   useEffect(() => {
     const savedDonations = getDonations();
@@ -21,13 +22,21 @@ const Donations = () => {
     }
   }, [getAllData]);
 
+
   return (
     <div className="md:max-w-7xl mx-auto my-10">
       <div className="md:grid grid-cols-2 gap-6">
-        {donated.map((data) => (
+        {donated.slice(0, total).map((data) => (
           <DonatedCard key={data.id} data={data}></DonatedCard>
         ))}
       </div>
+
+      <div className="flex justify-center my-7">
+
+        <button onClick={() => setTotal(total.length)} className="text-center bg-[#009444] px-3 py-2 text-white rounded-md">See All</button>
+      </div>
+     
+     
     </div>
   );
 };
