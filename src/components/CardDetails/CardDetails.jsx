@@ -11,7 +11,7 @@ const CardDetails = () => {
   const idInt = parseInt(id);
 
   const detail = details.find((detail) => detail.id === idInt);
-  console.log(id, idInt);
+  console.log(detail.id, idInt);
 
   const backgroundStyle = {
     background: `url(${detail.picture})`,
