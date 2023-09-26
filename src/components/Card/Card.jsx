@@ -1,16 +1,14 @@
 /* eslint-disable react/prop-types */
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Card = ({item}) => {
     const {id, picture , title, category, category_bg, card_bg, text_button_bg, description, price} = item;
 
-    const handleClickCard = () => {
-        console.log(`${title} clicked`);
-    }
-
   return (
     <div>
-      <div onClick={handleClickCard} className="card">
+        <Link to={`/cardDetails/${id}`}>
+      <div className="card">
         <figure>
           <img
             src={picture}
@@ -27,6 +25,7 @@ const Card = ({item}) => {
          
         </div>
       </div>
+      </Link>
     </div>
   );
 };
