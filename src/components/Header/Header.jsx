@@ -1,39 +1,30 @@
-import React from "react";
 import logo from "../../assets/logo.png";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import "./Header.css";
 
 const Header = () => {
-  const links = (
+  const NavLinks = (
     <>
       <li>
-        <Link
-          className="text-xl hover:text-[#FF444A] hover:underline hover:bg-base-100 active:text-[#FF444A] active:underline active:bg-transparent0"
-          to="/"
-        >
+        <NavLink className="text-xl px-6" to="/">
           Home
-        </Link>
+        </NavLink>
       </li>
       <li>
-        <Link
-          className="text-xl hover:text-[#FF444A] hover:underline hover:bg-base-100  active:text-[#FF444A] active:underline active:bg-transparent"
-          to={`/donation`}
-        >
+        <NavLink className="text-xl px-6" to={`/donation`}>
           Donation
-        </Link>
+        </NavLink>
       </li>
       <li>
-        <Link
-          className="text-xl hover:text-[#FF444A] hover:underline hover:bg-base-100  active:text-[#FF444A] active:underline active:bg-transparent"
-          to="/statistics"
-        >
+        <NavLink className="text-xl px-6" to="/statistics">
           Statistics
-        </Link>
+        </NavLink>
       </li>
     </>
   );
   return (
     <div className="max-w-7xl mx-auto">
-      <div className="navbar bg-transparent ">
+      <div className="navbar">
         <div className="md:navbar-start navbar-center">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -54,19 +45,19 @@ const Header = () => {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className=" menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
-              {links}
+              {NavLinks}
             </ul>
           </div>
           <div className="w-40">
-            <Link to='/'>
+            <NavLink to="/">
               <img src={logo} alt="Logo" />
-            </Link>
+            </NavLink>
           </div>
         </div>
         <div className="navbar-end hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">{links}</ul>
+          <ul className=" menu-horizontal">{NavLinks}</ul>
         </div>
       </div>
     </div>

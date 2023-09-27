@@ -9,12 +9,14 @@ const getDonations = () => {
 
 const saveDonations = (id) => {
     const storedDonation = getDonations()
-    
-    const exists = storedDonation.find(donationID => donationID.id == id)
+    const exists = storedDonation.find(donationID => donationID == id)
     
     if(!exists){
         storedDonation.push(id)
-        localStorage.setItem('Donations', JSON.stringify(storedDonation))
+        localStorage.setItem('Donations', JSON.stringify(storedDonation)) 
+        return true
+    }else{
+        return false
     }
 }
 
