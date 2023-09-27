@@ -11,7 +11,7 @@ import CardDetails from "./components/CardDetails/CardDetails.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root></Root>,
+    element: <Root> </Root>,  
     children: [
       {
         path: "/",
@@ -31,6 +31,7 @@ const router = createBrowserRouter([
         loader: () => fetch('/Card.json')
       }
     ],
+    
   },
 ]);
 
