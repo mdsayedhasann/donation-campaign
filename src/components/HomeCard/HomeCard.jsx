@@ -5,7 +5,7 @@ import Card from "../Card/Card";
 const HomeCard = () => {
   const [card, setCard] = useState([]);
   useEffect(() => {
-    fetch("/public/Card.json")
+    fetch("/Card.json")
       .then((res) => res.json())
       .then((data) => setCard(data));
   }, []);
