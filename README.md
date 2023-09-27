@@ -1,4 +1,4 @@
-Features 
+# Features 
 - Show all the Donations in Homepage from JSON 
 - Donation Page Details open when clicked on each donation card
 - When someone clicked on Donate button, this is get stored in Local Storage and the data are stored in Donation Page 
